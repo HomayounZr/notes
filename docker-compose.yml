@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  main_worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./:nest_app
+
+volumes:
+  nest_app:
